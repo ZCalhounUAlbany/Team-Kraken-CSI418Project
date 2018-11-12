@@ -21,15 +21,10 @@
 		<div class="content">
 			<form action="/KrakenWebProject/Login" method="post">
 				Username: <input type="text" name="name" /> 
-				Password:<input type="password" name="password" /> 
+				Password: <input type="password" name="password" /> 
 				<input type="submit" name="button" value="Login" /> <br><br>
 				<input type="submit" name="button" value="Fake Login" />
 			</form> 
 		</div>
-		
-		<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
-		<script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	
 	</body>
-
 </html>
