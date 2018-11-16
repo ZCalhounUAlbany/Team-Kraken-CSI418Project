@@ -2,9 +2,7 @@ package servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class LoginServlet
  */
 public class Login extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-       
+    private static final long serialVersionUID = 1L;
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -23,36 +21,32 @@ public class Login extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/views/login.jsp").forward(request, response);
-	}
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		checkCredentials(request, response);
-		doGet(request, response);
-	}
-	
-	private void checkCredentials(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String button = request.getParameter("button");
-		String username = request.getParameter("name");
-		String password = request.getParameter("password");
-		
-		if (button == null)
-			return;
-		
-		log(button);
-		
-		if (username == null || password == null)
-			return;
-		
-		if (username.equals("Matthew") && password.equals("LeLiever"))
-			log("VALID LOGIN!!!");
-	}
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+     */
+    protected void doPost(HttpServletRequest request,
+                          HttpServletResponse response)
+            throws ServletException, IOException {
+        PrintWriter out = response.getWriter();
+        String username = request.getParameter("un");
+        String password = request.getParameter("pw");
+        try {
+            if (sqlmethods.verifyUser(username,password)){
+                request.setAttribute("username", username);
+                request.getRequestDispatcher("/views/searchpage.jsp").forward(request, response);
+            } else {
+                request.setAttribute("errorMessage","Sorry, Invalid username or password");
+                request.getRequestDispatcher("/views/login.jsp").forward(request, response);
+            }
+        } catch (Exception e) {
+            out.println("sorry,some error");
+        }
+    }
+
 }
