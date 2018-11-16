@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,13 +20,18 @@
 </head>
 
 <body>
-<div style="height: 350px;"> </div>
+<div style="height: 100px"> </div>
 <div class="content">
 	<form action="/KrakenWebProject/Login" method="post">
-		Username: <input type="text" name="un" />
-		Password: <input type="text" name="pw" />
+		Username: <input type="text" name="un" required/>
+		<br>
+		Password: <input type="text" name="pw" required/>
+		<p></p>
 		<input type="submit" value="Login" /> <br><br>
 	</form>
+	<p style="color:red;">${errorMessage}</p>
+	<p></p>
+	<a href="/resetpassword.jsp"><button>Reset Password</button></a>
 </div>
 </body>
 </html>
