@@ -19,4 +19,13 @@
 		<servlet-name>Login</servlet-name>
 		<url-pattern>/Login</url-pattern>
 	</servlet-mapping>
+	
+	  <servlet>
+        <servlet-name>resetPW</servlet-name>
+        <servlet-class>servlets.resetPW</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>resetPW</servlet-name>
+        <url-pattern>/resetPW</url-pattern>
+    </servlet-mapping>
 </web-app>

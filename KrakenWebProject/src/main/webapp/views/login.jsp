@@ -25,7 +25,7 @@
     <form action="/KrakenWebProject/Login" method="post">
         Username: <input type="text" name="un" required/>
         <p></p>
-        Password: <input type="text" name="pw" required/>
+        Password: <input type="password" name="pw" required/>
         <p></p>
         <input type="submit" value="Login" />
     </form>
