@@ -10,7 +10,6 @@ import java.io.PrintWriter;
 //import java.sql.Connection;
 
 
-@WebServlet(name = "resetPW")
 public class resetPW extends HttpServlet {
     private static final long serialVersionUID = 1L;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
