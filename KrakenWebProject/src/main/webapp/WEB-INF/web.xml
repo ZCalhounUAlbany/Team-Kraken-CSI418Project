@@ -28,4 +28,14 @@
         <servlet-name>resetPW</servlet-name>
         <url-pattern>/resetPW</url-pattern>
     </servlet-mapping>
+    
+    	  <servlet>
+        <servlet-name>search</servlet-name>
+        <servlet-class>servlets.search</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>search</servlet-name>
+        <url-pattern>/search</url-pattern>
+    </servlet-mapping>
+    
 </web-app>

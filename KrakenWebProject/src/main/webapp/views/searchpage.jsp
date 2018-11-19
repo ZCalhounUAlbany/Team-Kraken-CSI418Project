@@ -33,7 +33,7 @@
 #extras {
     width: 400px;
     top: 250px;
-    left: 30px;
+    left: 80px;
     position: relative;
 }
 #extras input {
@@ -76,7 +76,7 @@
 </head>
 <body>
 <div align="center">
-    <form id="main_form" action="/search" method="Post">
+    <form id="main_form" action="/KrakenWebProject/search" method="Post">
         <h1>Dear: ${username}</h1>
         <h1>Welcome to Search Page</h1>
         <select name="category">
