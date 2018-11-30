@@ -95,7 +95,7 @@
             <input class="extra-button" type="submit" value="Acquire Data">
         </form>
 
-        <form action="views/login.jsp" onsubmit="logout_popup()">
+        <form action="/KrakenWebProject/Login" onsubmit="logout_popup()">
             <input class="extra-button" type="submit" value="Logout">
         </form>
     </div>

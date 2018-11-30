@@ -30,7 +30,7 @@
         <input type="submit" value="Login" />
     </form>
     <p style="color:red;">${errorMessage}</p>
-    <a href="resetpassword.jsp"><button>Reset Password</button></a>
+    <a href="/KrakenWebProject/resetPW"><button>Reset Password</button></a>
 </div>
 </body>
 </html>
