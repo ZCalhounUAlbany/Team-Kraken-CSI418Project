@@ -9,7 +9,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script src="../js/main.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Search Page</title>
         <script>    
@@ -22,6 +21,9 @@
         function changeTextfield() {
             if(document.getElementById('category_id').value == "acquiredDate") {
                 document.getElementById('search_box').type = 'date';
+            }
+            else{
+            	document.getElementById('search_box').type = 'text';
             }
         }
         function displayContact() {
