@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="../js/main.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title>Search Page</title>
         <script>    
@@ -18,7 +19,11 @@
         function getData_popup() {
             alert('getting data');
         }
-
+        function changeTextfield() {
+            if(document.getElementById('category_id').value == "acquiredDate") {
+                document.getElementById('search_box').type = 'date';
+            }
+        }
         function displayContact() {
             var x = document.getElementById("contactInfo");
             if (x.style.display === "none") {
@@ -79,7 +84,7 @@
     <form id="main_form" action="/KrakenWebProject/search" method="Post">
         <h1>Dear: ${username}</h1>
         <h1>Welcome to Search Page</h1>
-        <select name="category">
+        <select id= "category_id" name="category" onchange="changeTextfield()">
             <option placeholder="">Category</option>
             <option value="acquiredDate">Date</option>
             <option value="headline">Headline</option>
