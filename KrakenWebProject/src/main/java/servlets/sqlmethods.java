@@ -60,6 +60,9 @@ public class sqlmethods {
         if (parameter.get(0).equals("acquiredDate")){
             selectSQL = "SELECT * FROM data WHERE " + "DATE(" + parameter.get(0) + ")" + "= " + "\"" + value.get(0) + "\"";
         }
+        else if (parameter.get(0).equals("headline")|| parameter.get(0).equals("symbolText")){
+            selectSQL = "SELECT * FROM data WHERE " + parameter.get(0)  + " regexp " + "\"[[:<:]]" + value.get(0) + "[[:>:]]\"";
+        }
         else {
             selectSQL = "SELECT * FROM data WHERE " + parameter.get(0) + "= " + "\"" + value.get(0) + "\"";
         }
