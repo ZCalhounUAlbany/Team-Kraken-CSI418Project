@@ -1,3 +1,5 @@
+package scraper;
+
 import java.util.List;
 import com.jaunt.Element;
 import com.jaunt.Elements;

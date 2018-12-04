@@ -31,5 +31,13 @@
         <servlet-name>search</servlet-name>
         <url-pattern>/search</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>getData</servlet-name>
+        <servlet-class>servlets.getData</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>getData</servlet-name>
+        <url-pattern>/getData</url-pattern>
+    </servlet-mapping>
     
 </web-app>

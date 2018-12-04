@@ -1,5 +1,10 @@
+package scraper;
+
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+
+import servlets.sqlmethods;
+
 import java.util.List;
 import java.util.Arrays;
 import java.util.regex.Matcher;
@@ -42,7 +47,7 @@ public class scraper{
                             Matcher m = pa.matcher(p.text());
                             while (m.find()) {
                                 System.out.println("headline " + headline + " " + "Symbol " + sybmol + " " + "Text " + m.group(1));
-                                //sqlmethods.insertTable(headline, sybmol, m.group(1)); sqlexception
+                                sqlmethods.insertTable(headline, sybmol, m.group(1)); //sqlexception
                             }
                         }
                     }
