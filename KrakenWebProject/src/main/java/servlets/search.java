@@ -43,7 +43,7 @@ public class search extends HttpServlet {
             request.setAttribute("results", results);
             request.getRequestDispatcher("/views/searchresult.jsp").forward(request, response);
         }catch (SQLException e){
-            out.println("sorry,some error");
+            out.println("sorry,some error occured. Please return back to the search page");
         }
     }
 
