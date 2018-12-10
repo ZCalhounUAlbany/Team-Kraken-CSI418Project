@@ -72,7 +72,14 @@
         var doc = new jsPDF('p', 'pt','letter');
         var elem = document.getElementById("rsTable");
         var res = doc.autoTableHtmlToJson(elem);
-        doc.autoTable(res.columns, res.data);
+        doc.autoTable(res.columns, res.data, {styles:{overflow:'linebreak',columnWidth: 'wrap'},
+            columnStyles: {
+                0: {columnWidth: 30},
+                1: {columnWidth: 80},
+                2: {columnWidth: 130},
+                3: {columnWidth: 50},
+                4: {columnWidth: 250}
+            }});
         doc.save("Data.pdf")
     });
 
