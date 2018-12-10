@@ -22,16 +22,14 @@
 <body>
 <div style="height: 100px"> </div>
 <div class="content">
-    <form action="/KrakenWebProject/Login" method="post">
+    <form action="/KrakenWebProject/CreateUser" method="post">
         Username: <input type="text" name="un" required/>
         <p></p>
         Password: <input type="password" name="pw" required/>
         <p></p>
-        <input type="submit" value="Login" />
+        <input type="submit" value="Create Account" />
     </form>
     <p style="color:red;">${errorMessage}</p>
-    <a href="/KrakenWebProject/CreateUser"><button>Create Account</button></a>
-    <a href="/KrakenWebProject/resetPW"><button>Reset Password</button></a>
 </div>
 </body>
 </html>

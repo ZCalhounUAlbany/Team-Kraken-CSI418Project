@@ -129,6 +129,41 @@ public class sqlmethods {
         dbConnection.close();
         return isUser;
     }
+    
+    public static boolean hasUser(String username) throws SQLException {
+        Connection dbConnection = null;
+        Statement stmt = null;
+        ResultSet rs = null;
+        dbConnection = getConnection();
+        boolean hasUser = false;
+
+
+        stmt = dbConnection.createStatement();
+        String sql = "SELECT * FROM user WHERE username = \"" + username + "\"";
+        System.out.println(sql);
+        rs = stmt.executeQuery(sql);
+        if (rs.next()) {
+            System.out.println("authorized");
+            hasUser = true;
+        }
+        rs.close();
+        stmt.close();
+        dbConnection.close();
+        return hasUser;
+    }
+    
+    public static void addUser(String username, String password) throws SQLException {
+        Connection dbConnection = null;
+        dbConnection = getConnection();
+        
+        String query = "insert into user (username, password) values (?,?)";
+        PreparedStatement statement = dbConnection.prepareStatement(query);
+        statement.setString(1, username);
+        statement.setString(2, password);
+        
+        statement.executeUpdate();
+        dbConnection.close();
+    }
 
     public static void updatepw(String username, String entered_npw) throws SQLException {
         Connection dbConnection = null;
