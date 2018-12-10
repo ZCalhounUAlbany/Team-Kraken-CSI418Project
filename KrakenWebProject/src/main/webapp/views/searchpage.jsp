@@ -86,15 +86,15 @@
     <form id="main_form" action="/KrakenWebProject/search" method="Post">
         <h1>Dear: ${username}</h1>
         <h1>Welcome to Search Page</h1>
-        <select id= "category_id" name="category" onchange="changeTextfield()">
-            <option placeholder="">Category</option>
+        <select id= "category_id" name="category" onchange="changeTextfield()" required>
+            <option value="">Category</option>
             <option value="acquiredDate">Date</option>
             <option value="headline">Headline</option>
             <option value="symbol">Symbol</option>
             <option value="symbolText">Symbol Text</option>
         </select>
         <p></p>
-        <input type="text" id="search_box" name="search_input" placeholder="Type to Search">
+        <input type="text" id="search_box" name="search_input" placeholder="Type to Search" required>
         <input type="submit" value="Search">
     </form>
     <div id="extras">
