@@ -35,6 +35,10 @@
         <servlet-name>getData</servlet-name>
         <servlet-class>servlets.getData</servlet-class>
     </servlet>
+    <servlet-mapping>
+        <servlet-name>getData</servlet-name>
+        <url-pattern>/getData</url-pattern>
+    </servlet-mapping>
     <servlet>
     	<description>
     	</description>
@@ -42,10 +46,6 @@
     	<servlet-name>CreateUser</servlet-name>
     	<servlet-class>servlets.CreateUser</servlet-class>
     </servlet>
-    <servlet-mapping>
-        <servlet-name>getData</servlet-name>
-        <url-pattern>/getData</url-pattern>
-    </servlet-mapping>
     <servlet-mapping>
     	<servlet-name>CreateUser</servlet-name>
     	<url-pattern>/CreateUser</url-pattern>
