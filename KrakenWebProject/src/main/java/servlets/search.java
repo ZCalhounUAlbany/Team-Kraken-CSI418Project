@@ -14,7 +14,7 @@ public class search extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 5356033511716867297L;
-
+	
 	@SuppressWarnings("static-access")
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
