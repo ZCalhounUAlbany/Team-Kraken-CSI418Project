@@ -58,17 +58,21 @@
     </table>
 </div>
 <script>
+	
     $('#btnExcel').click(function(){
+    var file = prompt("Enter the filename including .xls");
         $("#rsTable").table2excel({
-            filename: "Data.xls",
+            filename: file,
         });
     });
     $('#btnCSV').click(function(){
+    var file = prompt("Enter the filename including .csv");
         $("#rsTable").table2csv({
-            filename: "Data.csv",
+              filename: file,
         });
     });
     $('#btnPDF').click(function generatepdf() {
+    var file = prompt("Enter the filename including .pdf");
         var doc = new jsPDF('p', 'pt','letter');
         var elem = document.getElementById("rsTable");
         var res = doc.autoTableHtmlToJson(elem);
@@ -80,7 +84,7 @@
                 3: {columnWidth: 50},
                 4: {columnWidth: 250}
             }});
-        doc.save("Data.pdf")
+        doc.save(file)
     });
 
 </script>
