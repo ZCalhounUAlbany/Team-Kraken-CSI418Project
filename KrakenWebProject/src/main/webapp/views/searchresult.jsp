@@ -21,7 +21,6 @@
 </head>
 <body>
 <div>
-<h1>your result is here:</h1>
     <button id="btnExcel">Export Excel</button>
     <button id="btnCSV">Export CSV</button>
     <button id="btnPDF">Export PDF</button>
@@ -57,6 +56,9 @@
     </table>
 </div>
 <script>
+	$(document).ready( function () {
+ 	   $('#rsTable').DataTable();
+		} );
     $('#btnExcel').click(function(){
         $("#rsTable").table2excel({
             filename: "Data.xls",
