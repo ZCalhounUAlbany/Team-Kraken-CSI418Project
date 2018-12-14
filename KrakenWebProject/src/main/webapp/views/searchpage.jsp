@@ -88,6 +88,7 @@
         <h1>Welcome to Search Page</h1>
         <select id= "category_id" name="category" onchange="changeTextfield()" required>
             <option value="">Category</option>
+            <option value="ID">ID</option>
             <option value="acquiredDate">Date</option>
             <option value="headline">Headline</option>
             <option value="symbol">Symbol</option>
